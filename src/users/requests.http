@@ -1,0 +1,43 @@
+### Create a new user
+POST http://localhost:3000/auth/signup
+content-type: application/json
+
+{
+    "email": "illia@gmail.com",
+    "password": "qwerty1234",
+    "bossId": 2,
+    "isAdmin": true
+}
+
+### Log in a user
+POST http://localhost:3000/auth/signin
+content-type: application/json
+
+{
+    "email": "illia@gmail.com",
+    "password": "qwerty1234"
+}
+
+### Log out a user
+POST http://localhost:3000/auth/signout
+content-type: application/json
+
+{}
+
+### Get current user
+GET http://localhost:3000/auth/me
+
+### Find user by id
+GET http://localhost:3000/auth/3
+
+### Find users
+GET http://localhost:3000/auth
+
+
+### Update boss of user
+PATCH http://localhost:3000/auth/4
+content-type: application/json
+
+{
+    "bossId": 3
+}
